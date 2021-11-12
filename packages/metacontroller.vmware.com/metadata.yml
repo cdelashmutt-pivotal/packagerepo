@@ -6,5 +6,8 @@ spec:
   displayName: "metacontroller"
   longDescription: "Metacontroller is an add-on for Kubernetes that makes it easy to write and deploy custom controllers in the form of simple scripts."
   shortDescription: "Controller that runs custom scripts"
+  maintainers:
+  - name: "Chris DeLashmutt <cdelashmutt@vmware.com>"
+  supportDescription: "Community"
   categories:
   - controller

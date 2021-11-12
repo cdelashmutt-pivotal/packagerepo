@@ -6,5 +6,8 @@ spec:
   displayName: "metallb"
   longDescription: "A Kubernetes controller to handle LoadBalancer services with Layer2/BGP networking"
   shortDescription: "Controller for LoadBalancer services"
+  maintainers:
+  - name: "Chris DeLashmutt <cdelashmutt@vmware.com>"
+  supportDescription: "Community"
   categories:
   - loadbalancer
