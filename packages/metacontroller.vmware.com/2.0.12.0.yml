@@ -1,0 +1,25 @@
+---
+apiVersion: data.packaging.carvel.dev/v1alpha1
+kind: Package
+metadata:
+  name: metacontroller.vmware.com.2.0.12.0
+spec:
+  refName: metacontroller.vmware.com
+  version: 2.0.12.0
+  releaseNotes: |
+        Initial release of the metacontroller package
+  template:
+    spec:
+      fetch:
+      - imgpkgBundle:
+          image: ghcr.io/cdelashmutt-pivotal/metacontroller-package:v2.0.12.0
+      template:
+      - ytt:
+          paths:
+          - "config/"
+      - kbld:
+          paths:
+          - "-"
+          - ".imgpkg/images.yml"
+      deploy:
+      - kapp: {}

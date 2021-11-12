@@ -2,6 +2,9 @@
 apiVersion: imgpkg.carvel.dev/v1alpha1
 images:
 - annotations:
+    kbld.carvel.dev/id: ghcr.io/cdelashmutt-pivotal/metacontroller-package:v2.0.12.0
+  image: ghcr.io/cdelashmutt-pivotal/metacontroller-package@sha256:a12f876461a51b0c6bb0a2a85e35cf9e513cf10ecdfb6833d799f0317ef33d5b
+- annotations:
     kbld.carvel.dev/id: ghcr.io/cdelashmutt-pivotal/metallb-package:0.0.1
   image: ghcr.io/cdelashmutt-pivotal/metallb-package@sha256:32f56d0fcc43d00e9c8abcbf85fa9724470f9b4e244082b68832864a587dae35
 kind: ImagesLock

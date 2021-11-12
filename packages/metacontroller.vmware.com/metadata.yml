@@ -1,0 +1,10 @@
+apiVersion: data.packaging.carvel.dev/v1alpha1
+kind: PackageMetadata
+metadata:
+  name: metacontroller.vmware.com
+spec:
+  displayName: "metacontroller"
+  longDescription: "Metacontroller is an add-on for Kubernetes that makes it easy to write and deploy custom controllers in the form of simple scripts."
+  shortDescription: "Controller that runs custom scripts"
+  categories:
+  - controller
