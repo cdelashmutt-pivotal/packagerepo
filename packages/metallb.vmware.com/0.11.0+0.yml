@@ -2,10 +2,10 @@
 apiVersion: data.packaging.carvel.dev/v1alpha1
 kind: Package
 metadata:
-  name: metallb.vmware.com.1.0.0
+  name: metallb.vmware.com.0.11.0+0
 spec:
   refName: metallb.vmware.com
-  version: 1.0.0
+  version: 0.11.0+0
   releaseNotes: |
         Initial release of the metallb package
   licenses:
