@@ -8,6 +8,9 @@ spec:
   version: 2.0.12+0
   releaseNotes: |
         Initial release of the metacontroller package
+  licenses:
+  - "Apache 2.0"
+  releasedAt: 2021-11-12T18:27:28Z-5
   template:
     spec:
       fetch:
