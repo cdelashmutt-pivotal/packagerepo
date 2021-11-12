@@ -1,0 +1,9 @@
+---
+apiVersion: packaging.carvel.dev/v1alpha1
+kind: PackageRepository
+metadata:
+  name: cdelashmutt-pivotal-repository
+spec:
+  fetch:
+    imgpkgBundle:
+      image: ghcr.io/cdelashmutt-pivotal/packagerepo:1.0.0

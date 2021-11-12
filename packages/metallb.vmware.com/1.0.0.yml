@@ -1,0 +1,45 @@
+---
+apiVersion: data.packaging.carvel.dev/v1alpha1
+kind: Package
+metadata:
+  name: metallb.vmware.com.1.0.0
+spec:
+  refName: metallb.vmware.com
+  version: 1.0.0
+  releaseNotes: |
+        Initial release of the metallb package
+  valuesSchema:
+    openAPIv3:
+      title: metallb.vmware.com values schema
+      examples:
+      - address_ranges:
+        - 192.168.0.1-192.168.0.10
+      - address_ranges:
+        - 192.168.0.0/28
+      properties:
+        address_ranges:
+          type: array
+          items:
+            type: string
+          description: Ranges of IPs to use for MetalLB allocations
+          default: []
+          examples:
+          - 
+            - 192.168.0.1-192.168.0.10
+          - 
+            - 192.168.0.0/28
+  template:
+    spec:
+      fetch:
+      - imgpkgBundle:
+          image: ghcr.io/cdelashmutt-pivotal/metallb-package:0.0.1
+      template:
+      - ytt:
+          paths:
+          - "config/"
+      - kbld:
+          paths:
+          - "-"
+          - ".imgpkg/images.yml"
+      deploy:
+      - kapp: {}

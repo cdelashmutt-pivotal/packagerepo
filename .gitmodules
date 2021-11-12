@@ -1,0 +1,3 @@
+[submodule "packages/educates.vmware.com/eduk8s"]
+	path = packages/educates.vmware.com/eduk8s
+	url = https://github.com/eduk8s/eduk8s
