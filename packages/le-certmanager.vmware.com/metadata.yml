@@ -1,0 +1,13 @@
+apiVersion: data.packaging.carvel.dev/v1alpha1
+kind: PackageMetadata
+metadata:
+  name: le-certmanager.vmware.com
+spec:
+  displayName: "le-certmanager"
+  longDescription: "A certmanager cluster issuer for Let's Encrypt that can use Route53, Azure DNS, or GCP"
+  shortDescription: "Certmanager cluster issuer for Let's Encrypt"
+  maintainers:
+  - name: "Chris DeLashmutt <cdelashmutt@vmware.com>"
+  supportDescription: "Community"
+  categories:
+  - certificates

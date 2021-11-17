@@ -2,8 +2,11 @@
 apiVersion: imgpkg.carvel.dev/v1alpha1
 images:
 - annotations:
+    kbld.carvel.dev/id: ghcr.io/cdelashmutt-pivotal/le-certmanager-package:1.0.0
+  image: ghcr.io/cdelashmutt-pivotal/le-certmanager-package@sha256:57309847ecbf5b3fc838e0a421681cf9e77c2b909e996dec0b17ba377868bd4c
+- annotations:
     kbld.carvel.dev/id: ghcr.io/cdelashmutt-pivotal/metacontroller-package:v2.0.12.0
-  image: ghcr.io/cdelashmutt-pivotal/metacontroller-package@sha256:a12f876461a51b0c6bb0a2a85e35cf9e513cf10ecdfb6833d799f0317ef33d5b
+  image: ghcr.io/cdelashmutt-pivotal/metacontroller-package@sha256:25a713228d7067bd850a26d70b5d73e7162198f342febf4909041c14c3a5f3f1
 - annotations:
     kbld.carvel.dev/id: ghcr.io/cdelashmutt-pivotal/metallb-package:0.0.1
   image: ghcr.io/cdelashmutt-pivotal/metallb-package@sha256:32f56d0fcc43d00e9c8abcbf85fa9724470f9b4e244082b68832864a587dae35
