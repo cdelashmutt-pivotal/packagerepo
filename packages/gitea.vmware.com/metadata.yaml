@@ -1,0 +1,13 @@
+apiVersion: data.packaging.carvel.dev/v1alpha1
+kind: PackageMetadata
+metadata:
+  name: gitea.vmware.com
+spec:
+  displayName: "gitea"
+  longDescription: "Gitea is a community managed lightweight code hosting solution written in Go. It is published under the MIT license."
+  shortDescription: "Lightweight Git server"
+  maintainers:
+  - name: "Chris DeLashmutt <cdelashmutt@vmware.com>"
+  supportDescription: "Community"
+  categories:
+  - scm
