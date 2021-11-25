@@ -2,6 +2,9 @@
 apiVersion: imgpkg.carvel.dev/v1alpha1
 images:
 - annotations:
+    kbld.carvel.dev/id: ghcr.io/cdelashmutt-pivotal/gitea-package:1.15.3_0
+  image: ghcr.io/cdelashmutt-pivotal/gitea-package@sha256:4bc2f08777760efca323307f40d97578d3c20b09bd7ccfa3f3d1634a785afc70
+- annotations:
     kbld.carvel.dev/id: ghcr.io/cdelashmutt-pivotal/le-certmanager-package:1.0.0
   image: ghcr.io/cdelashmutt-pivotal/le-certmanager-package@sha256:57309847ecbf5b3fc838e0a421681cf9e77c2b909e996dec0b17ba377868bd4c
 - annotations:
