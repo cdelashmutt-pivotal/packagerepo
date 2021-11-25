@@ -1,0 +1,46 @@
+---
+apiVersion: data.packaging.carvel.dev/v1alpha1
+kind: Package
+metadata:
+  name: gitea.vmware.com.1.15.3+0
+spec:
+  refName: gitea.vmware.com
+  version: 1.15.3+0
+  releaseNotes: |
+        Initial release of the gitea package
+  licenses:
+  - "Apache 2.0"
+  releasedAt: 2021-11-25T04:45:00Z
+  valuesSchema:
+    openAPIv3:
+      title: gitea.vmware.com values schema
+      examples:
+      - ingress_domain: shared.azure.grogscave.net
+        ingress_secret: default/default-cert-tls
+      properties:
+        ingress_domain:
+          type: string
+          description: Top level ingress domain for cluster.  Will prepend "gitea" to the domain for ingress.
+          examples:
+          - shared.azure.grogscave.net
+        ingress_secret:
+          type: string
+          description: Name of TLS secret to use with HTTPProxy.  Can be a delgated secret from another namespace.
+          examples:
+          - my-tls-secret
+          - default/default-cert-tls
+  template:
+    spec:
+      fetch:
+      - imgpkgBundle:
+          image: ghcr.io/cdelashmutt-pivotal/gitea-package:1.15.3_0
+      template:
+      - ytt:
+          paths:
+          - "config/"
+      - kbld:
+          paths:
+          - "-"
+          - ".imgpkg/images.yml"
+      deploy:
+      - kapp: {}
