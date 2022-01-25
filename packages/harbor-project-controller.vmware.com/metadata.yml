@@ -1,0 +1,13 @@
+apiVersion: data.packaging.carvel.dev/v1alpha1
+kind: PackageMetadata
+metadata:
+  name: harbor-project-controller.vmware.com
+spec:
+  displayName: "harbor-project-controller"
+  longDescription: "A metacontroller-based package to create Harbor projects based on custom objects in Kubernetes"
+  shortDescription: "Create Harbor projects using K8s objects"
+  maintainers:
+  - name: "Chris DeLashmutt <cdelashmutt@vmware.com>"
+  supportDescription: "Community"
+  categories:
+  - registry

@@ -5,3 +5,6 @@ A collection of useful Kubernetes components packaged up as a [Carvel PackageRep
 This package repository currently includes:
 * [MetalLB](https://github.com/metallb/metallb)
 * [Metacontroller](https://github.com/metacontroller/metacontroller)
+* [Gitea](https://gitea.io/)
+* le-certmanager: A package to set up cert-manager to use a Let's Encrypt Cluster issuer using the DNS solver against AWS Route53, AzureDNS, or GCP DNS
+* harbor-project-controller: A metacontroller-based package to create Harbor projects based on custom objects in Kubernetes

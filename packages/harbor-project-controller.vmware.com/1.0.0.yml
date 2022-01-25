@@ -1,0 +1,56 @@
+---
+apiVersion: data.packaging.carvel.dev/v1alpha1
+kind: Package
+metadata:
+  name: harbor-project-controller.vmware.com.1.0.0
+spec:
+  refName: harbor-project-controller.vmware.com
+  version: 1.0.0
+  releaseNotes: |
+        Initial release of the harbor-project-controller package
+  licenses:
+  - "Apache 2.0"
+  releasedAt: 2022-01-25T18:53:00Z
+  valuesSchema:
+    openAPIv3:
+      title: harbor-project-controller.vmware.com values schema
+      examples:
+      - harbor:
+          hostname: harbor-core.tanzu-system-registry
+          username: robot$harbor-project-controller
+          password: cts8SgTjbFfGiGd50yeYNNz3mcbnbK1x
+      properties:
+        harbor:
+          type: object
+          description: Harbor Info
+          properties:
+            hostname:
+              description: The hostname of the Harbor server to manage.
+              type: string
+              examples:
+              - harbor-core.tanzu-system-registry
+              - harbor.customdomain.com
+            username:
+              description: The username of the account to use to manage harbor projects.
+              type: string
+              examples:
+              - robot$harbor-project-controller
+              - clairice
+            password:
+              description: The password for the username of the account to use to manage harbor projects.
+              type: string
+  template:
+    spec:
+      fetch:
+      - imgpkgBundle:
+          image: ghcr.io/cdelashmutt-pivotal/harbor-project-controller-package:1.0.0
+      template:
+      - ytt:
+          paths:
+          - "config/"
+      - kbld:
+          paths:
+          - "-"
+          - ".imgpkg/images.yml"
+      deploy:
+      - kapp: {}
