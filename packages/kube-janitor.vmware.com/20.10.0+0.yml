@@ -1,0 +1,28 @@
+---
+apiVersion: data.packaging.carvel.dev/v1alpha1
+kind: Package
+metadata:
+  name: kube-janitor.vmware.com.20.10.0+0
+spec:
+  refName: kube-janitor.vmware.com
+  version: 20.10.0+0
+  releaseNotes: |
+        Initial release of the kube-janitor package
+  licenses:
+  - "Apache 2.0"
+  releasedAt: 2022-01-26T22:27:28Z
+  template:
+    spec:
+      fetch:
+      - imgpkgBundle:
+          image: ghcr.io/cdelashmutt-pivotal/kube-janitor-package:v20.10.0.0
+      template:
+      - ytt:
+          paths:
+          - "config/"
+      - kbld:
+          paths:
+          - "-"
+          - ".imgpkg/images.yml"
+      deploy:
+      - kapp: {}
