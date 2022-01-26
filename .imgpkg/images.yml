@@ -9,7 +9,7 @@ images:
   image: ghcr.io/cdelashmutt-pivotal/harbor-project-controller-package@sha256:edbf2bbabe8a64be795bf0f2abc82db0ddf34d6a78801dd23eb1a31fc5aac491
 - annotations:
     kbld.carvel.dev/id: ghcr.io/cdelashmutt-pivotal/kube-janitor-package:v20.10.0.0
-  image: ghcr.io/cdelashmutt-pivotal/kube-janitor-package@sha256:abb01fc56a2126caec7159f0defa910a340ace9ed53bdf912ce59019c09b6bb6
+  image: ghcr.io/cdelashmutt-pivotal/kube-janitor-package@sha256:44a908481d72b20ad2f95786565ba28f48f62b37988aec8b55bd3f13329f6afa
 - annotations:
     kbld.carvel.dev/id: ghcr.io/cdelashmutt-pivotal/le-certmanager-package:1.0.0
   image: ghcr.io/cdelashmutt-pivotal/le-certmanager-package@sha256:57309847ecbf5b3fc838e0a421681cf9e77c2b909e996dec0b17ba377868bd4c
