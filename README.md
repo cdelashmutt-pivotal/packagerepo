@@ -8,3 +8,4 @@ This package repository currently includes:
 * [Gitea](https://gitea.io/)
 * le-certmanager: A package to set up cert-manager to use a Let's Encrypt Cluster issuer using the DNS solver against AWS Route53, AzureDNS, or GCP DNS
 * harbor-project-controller: A metacontroller-based package to create Harbor projects based on custom objects in Kubernetes
+* [kube-janitor](https://codeberg.org/hjacobs/kube-janitor)
