@@ -21,7 +21,7 @@ images:
       - resolved:
           tag: v20.10.0.0
           url: ghcr.io/cdelashmutt-pivotal/kube-janitor-package:v20.10.0.0
-  image: ghcr.io/cdelashmutt-pivotal/kube-janitor-package@sha256:5276cc69be0151398a10f9d4be1e66ba18848c2fe242551b133bcd671e8da2a2
+  image: ghcr.io/cdelashmutt-pivotal/kube-janitor-package@sha256:40922adb0d9dc698aed95c394b313fc14825301adfd6f6691ad425da7dcc5983
 - annotations:
     kbld.carvel.dev/id: ghcr.io/cdelashmutt-pivotal/le-certmanager-package:1.0.0
     kbld.carvel.dev/origins: |
