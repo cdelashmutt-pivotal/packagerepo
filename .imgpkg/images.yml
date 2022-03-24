@@ -7,7 +7,7 @@ images:
       - resolved:
           tag: 1.15.3_0
           url: ghcr.io/cdelashmutt-pivotal/gitea-package:1.15.3_0
-  image: ghcr.io/cdelashmutt-pivotal/gitea-package@sha256:3ce8ae35c3985a68044d643ababcf21ffafdab9e00bb1bc7d919fc2f3587c33d
+  image: ghcr.io/cdelashmutt-pivotal/gitea-package@sha256:7aba9c04e75e06835db040fd1108a2d39696e8988c137e9b574b4383f56409a0
 - annotations:
     kbld.carvel.dev/id: ghcr.io/cdelashmutt-pivotal/harbor-project-controller-package:1.0.0
     kbld.carvel.dev/origins: |
