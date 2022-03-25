@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI
+name: Push to ghcr.io
 
 # Controls when the workflow will run
 on:
@@ -28,4 +28,4 @@ jobs:
         with:
           only: imgpkg
       - run: |
-          imgpkg push --registry-token=${{ secrets.GITHUB_TOKEN }} -b ghcr.io/${{ github.action_repository }}:${{ github.run_id }}.${{ github.run_number }}.${{ github.run_attempt }} -f .
+          imgpkg push --registry-token=${{ secrets.GITHUB_TOKEN }} -b ghcr.io/${{ github.repository }}:${{ github.run_id }}.${{ github.run_number }}.${{ github.run_attempt }} -f .
