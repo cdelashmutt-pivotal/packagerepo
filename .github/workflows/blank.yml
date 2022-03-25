@@ -24,8 +24,12 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
+      - id: string
+        uses: ASzc/change-string-case-action@v1
+        with:
+          string: ${{ github.repository }}
       - uses: vmware-tanzu/carvel-setup-action@v1
         with:
           only: imgpkg
       - run: |
-          imgpkg push --registry-token=${{ secrets.GITHUB_TOKEN }} -b ghcr.io/${{ github.repository }}:${{ github.run_id }}.${{ github.run_number }}.${{ github.run_attempt }} -f .
+          imgpkg push --registry-token=${{ secrets.GITHUB_TOKEN }} -b ghcr.io/${{ steps.string.outputs.lowercase }}:${{ github.run_id }}.${{ github.run_number }}.${{ github.run_attempt }} -f .
