@@ -32,4 +32,4 @@ jobs:
         with:
           only: imgpkg
       - run: |
-          imgpkg push -b ghcr.io/${{ steps.string.outputs.lowercase }}:${{ github.run_id }}.${{ github.run_number }}.${{ github.run_attempt }} -f .
+          imgpkg push --registry-token=${{ secrets.GITHUB_TOKEN }} -b ghcr.io/${{ steps.string.outputs.lowercase }}:${{ github.run_id }}.${{ github.run_number }}.${{ github.run_attempt }} -f .
