@@ -3,20 +3,44 @@ apiVersion: imgpkg.carvel.dev/v1alpha1
 images:
 - annotations:
     kbld.carvel.dev/id: ghcr.io/cdelashmutt-pivotal/gitea-package:1.15.3_0
-  image: ghcr.io/cdelashmutt-pivotal/gitea-package@sha256:4bc2f08777760efca323307f40d97578d3c20b09bd7ccfa3f3d1634a785afc70
+    kbld.carvel.dev/origins: |
+      - resolved:
+          tag: 1.15.3_0
+          url: ghcr.io/cdelashmutt-pivotal/gitea-package:1.15.3_0
+  image: ghcr.io/cdelashmutt-pivotal/gitea-package@sha256:7aba9c04e75e06835db040fd1108a2d39696e8988c137e9b574b4383f56409a0
 - annotations:
     kbld.carvel.dev/id: ghcr.io/cdelashmutt-pivotal/harbor-project-controller-package:1.0.0
+    kbld.carvel.dev/origins: |
+      - resolved:
+          tag: 1.0.0
+          url: ghcr.io/cdelashmutt-pivotal/harbor-project-controller-package:1.0.0
   image: ghcr.io/cdelashmutt-pivotal/harbor-project-controller-package@sha256:edbf2bbabe8a64be795bf0f2abc82db0ddf34d6a78801dd23eb1a31fc5aac491
 - annotations:
     kbld.carvel.dev/id: ghcr.io/cdelashmutt-pivotal/kube-janitor-package:v20.10.0.0
-  image: ghcr.io/cdelashmutt-pivotal/kube-janitor-package@sha256:5276cc69be0151398a10f9d4be1e66ba18848c2fe242551b133bcd671e8da2a2
+    kbld.carvel.dev/origins: |
+      - resolved:
+          tag: v20.10.0.0
+          url: ghcr.io/cdelashmutt-pivotal/kube-janitor-package:v20.10.0.0
+  image: ghcr.io/cdelashmutt-pivotal/kube-janitor-package@sha256:40922adb0d9dc698aed95c394b313fc14825301adfd6f6691ad425da7dcc5983
 - annotations:
     kbld.carvel.dev/id: ghcr.io/cdelashmutt-pivotal/le-certmanager-package:1.0.0
+    kbld.carvel.dev/origins: |
+      - resolved:
+          tag: 1.0.0
+          url: ghcr.io/cdelashmutt-pivotal/le-certmanager-package:1.0.0
   image: ghcr.io/cdelashmutt-pivotal/le-certmanager-package@sha256:57309847ecbf5b3fc838e0a421681cf9e77c2b909e996dec0b17ba377868bd4c
 - annotations:
     kbld.carvel.dev/id: ghcr.io/cdelashmutt-pivotal/metacontroller-package:v2.0.12.0
+    kbld.carvel.dev/origins: |
+      - resolved:
+          tag: v2.0.12.0
+          url: ghcr.io/cdelashmutt-pivotal/metacontroller-package:v2.0.12.0
   image: ghcr.io/cdelashmutt-pivotal/metacontroller-package@sha256:25a713228d7067bd850a26d70b5d73e7162198f342febf4909041c14c3a5f3f1
 - annotations:
     kbld.carvel.dev/id: ghcr.io/cdelashmutt-pivotal/metallb-package:0.0.1
+    kbld.carvel.dev/origins: |
+      - resolved:
+          tag: 0.0.1
+          url: ghcr.io/cdelashmutt-pivotal/metallb-package:0.0.1
   image: ghcr.io/cdelashmutt-pivotal/metallb-package@sha256:32f56d0fcc43d00e9c8abcbf85fa9724470f9b4e244082b68832864a587dae35
 kind: ImagesLock
