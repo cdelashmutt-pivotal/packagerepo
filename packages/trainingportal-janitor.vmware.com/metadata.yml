@@ -1,0 +1,13 @@
+apiVersion: data.packaging.carvel.dev/v1alpha1
+kind: PackageMetadata
+metadata:
+  name: trainingportal-janitor.vmware.com
+spec:
+  displayName: "trainingportal-janitor"
+  longDescription: "TrainingPortal Janitor cleans up (deletes) LearningCenter training portals with a configured expiry date (absolute timestamp)."
+  shortDescription: "Clean up LearningCenter TrainingPortals after an expiry"
+  maintainers:
+  - name: "Chris DeLashmutt <cdelashmutt@vmware.com>"
+  supportDescription: "Community"
+  categories:
+  - controller
