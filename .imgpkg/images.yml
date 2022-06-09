@@ -43,4 +43,11 @@ images:
           tag: 0.0.1
           url: ghcr.io/cdelashmutt-pivotal/metallb-package:0.0.1
   image: ghcr.io/cdelashmutt-pivotal/metallb-package@sha256:32f56d0fcc43d00e9c8abcbf85fa9724470f9b4e244082b68832864a587dae35
+- annotations:
+    kbld.carvel.dev/id: ghcr.io/tanzu-solutions-engineering/trainingportal-janitor-package:v0.0.1
+    kbld.carvel.dev/origins: |
+      - resolved:
+          tag: v0.0.1
+          url: ghcr.io/tanzu-solutions-engineering/trainingportal-janitor-package:v0.0.1
+  image: ghcr.io/tanzu-solutions-engineering/trainingportal-janitor-package@sha256:e702eb669b49c1aff5070aee63db36a8e0196431ec3b396a3c6ab515095fca7c
 kind: ImagesLock
