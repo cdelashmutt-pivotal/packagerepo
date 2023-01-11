@@ -30,6 +30,13 @@ images:
           url: ghcr.io/cdelashmutt-pivotal/le-certmanager-package:1.0.0
   image: ghcr.io/cdelashmutt-pivotal/le-certmanager-package@sha256:57309847ecbf5b3fc838e0a421681cf9e77c2b909e996dec0b17ba377868bd4c
 - annotations:
+    kbld.carvel.dev/id: ghcr.io/cdelashmutt-pivotal/le-certmanager-package:2.0.0
+    kbld.carvel.dev/origins: |
+      - resolved:
+          tag: 2.0.0
+          url: ghcr.io/cdelashmutt-pivotal/le-certmanager-package:2.0.0
+  image: ghcr.io/cdelashmutt-pivotal/le-certmanager-package@sha256:67a042bd3da5d6a70f9bd6b0ffe7dccfe8f4ffdc5b53fcf1fabbdf30128aa44b
+- annotations:
     kbld.carvel.dev/id: ghcr.io/cdelashmutt-pivotal/metacontroller-package:v2.0.12.0
     kbld.carvel.dev/origins: |
       - resolved:

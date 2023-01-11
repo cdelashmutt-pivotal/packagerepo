@@ -1,0 +1,147 @@
+---
+apiVersion: data.packaging.carvel.dev/v1alpha1
+kind: Package
+metadata:
+  name: le-certmanager.vmware.com.2.0.0
+spec:
+  refName: le-certmanager.vmware.com
+  version: 2.0.0
+  releaseNotes: |
+        Migrates to the released v1 version of cert-manager API
+  licenses:
+  - "Apache 2.0"
+  releasedAt: 2023-01-11T01:19:00Z
+  valuesSchema:
+    openAPIv3:
+      title: le-certmanager.vmware.com values schema
+      examples:
+      - acme:
+          email: me@here.com
+        aws:
+          region: us-east-2
+          credentials:
+            accessKey: AKIASOMEACCESSKEY
+            secretKey: a-secret-key
+            certManagerRoleArn: arn:aws:iam::11111:role/k8s-cert-manager
+          route53:
+            domain: foo.bar.com
+            zoneId: Z0SOMEZONEID
+      - acme:
+          email: me@here.com
+        gcp:
+          project: a-project-id
+          key: some-key-id
+      - acme:
+          email: me@here.com
+        azure:
+          environment: AzurePublicCloud
+          subscriptionId: f7382ac5-da11-4c82-aa89-b5b5887fb9af
+          tenantId: 2310e037-6984-4d18-a35d-0de1608cf24a
+          dnsResourceGroupName: dns-resource-group
+          dnsZoneName: foo.bar.com
+          credentials:
+            appId: 347d6301-4d15-42a4-9d41-169f09e39d3a
+            appPassword: a-secret-password
+      properties:
+        acme:
+          type: object
+          description: ACME Information
+          properties:
+            email:
+              description: The email to use for the ACME API registration to Let's Encrypt
+              type: string
+              examples:
+              - me@here.com
+        aws:
+          type: object
+          description: AWS Config Information
+          properties:
+            region:
+              description: The AWS region to use with cert-manager
+              type: string
+              examples:
+              - us-east-1
+              - eu-central-1
+            route53:
+              type: object
+              description: Route53 Information
+              properties:
+                zoneId:
+                  type: string
+                  description: The Zone ID for the Route53 zone to manage
+                  examples:
+                  - Z0SOMEZONEID
+            credentials:
+              type: object
+              description: AWS Credentials to use for the issuer
+              properties:
+                accessKey:
+                  type: string
+                  description: The Access Key of the account to use with this cluster issuer
+                  examples:
+                  - AKIASOMEACCESSKEY
+                secretKey:
+                  type: string
+                  description: The Secret Key of the account to use with this cluster issuer
+                  examples:
+                  - some-random-character-password
+                certManagerRoleArn:
+                  type: string
+                  description: The ARN of the role for the issuer to use when interacting with AWS apiVersion
+                  examples:
+                  - arn:aws:iam::123456789012:role/k8s-cert-manager
+        gcp:
+          type: object
+          description: Google Cloud Information
+          properties:
+            project:
+              type: string
+              description: The GCP Project ID to use for DNS management
+            key:
+              type: string
+              description: The GCP Key JSON to use for authentication
+        azure:
+          type: object
+          description: Azure Information
+          properties:
+            environment:
+              type: string
+              description: The Azure Environment to use with this issuer
+              default: AzurePublicCloud
+              examples:
+              - AzurePublicCloud
+            subscriptionId:
+              type: string
+              description: The Subscription ID for the account to use for DNS validations
+            tenantId:
+              type: string
+              description: The Tenant ID for the account to use for DNS validations
+            dnsResourceGroupName:
+              type: string
+              description: The resource group name that contains the DNS zone to manage
+            dnsZoneName:
+              type: string
+              description: The DNS Zone Name to manage
+              examples:
+              - foo.bar.com
+            credentials:
+              type: object
+              properties:
+                appId:
+                  type: string
+                  description: The ID of the application defined in AzureAD to use for authentication
+                appPassword:
+                  type: string
+                  description: The password for the application defined in AzureAD to use for authentication
+  template:
+    spec:
+      fetch:
+      - imgpkgBundle:
+          image: ghcr.io/cdelashmutt-pivotal/le-certmanager-package:2.0.0
+      template:
+      - ytt:
+          ignoreUnknownComments: true
+          paths:
+          - "config/"
+      deploy:
+      - kapp: {}
