@@ -18,5 +18,5 @@ kbld -f packages/ --imgpkg-lock-output .imgpkg/images.yml
 ```
 Then publish the repo:
 ```
-imgpkg push -b ghcr.io/cdelashmutt-pivotal/package -f .
+imgpkg push -b ghcr.io/cdelashmutt-pivotal/packagerepo:1.0.0 -f .
 ```

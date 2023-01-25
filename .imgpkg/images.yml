@@ -51,6 +51,13 @@ images:
           url: ghcr.io/cdelashmutt-pivotal/metallb-package:0.0.1
   image: ghcr.io/cdelashmutt-pivotal/metallb-package@sha256:32f56d0fcc43d00e9c8abcbf85fa9724470f9b4e244082b68832864a587dae35
 - annotations:
+    kbld.carvel.dev/id: ghcr.io/cdelashmutt-pivotal/terraform-operator-package:0.0.1
+    kbld.carvel.dev/origins: |
+      - resolved:
+          tag: 0.0.1
+          url: ghcr.io/cdelashmutt-pivotal/terraform-operator-package:0.0.1
+  image: ghcr.io/cdelashmutt-pivotal/terraform-operator-package@sha256:04cf01f002703a926b8ad425a86d40f86228f0383a002e2b587a77fa57a9bf53
+- annotations:
     kbld.carvel.dev/id: ghcr.io/tanzu-solutions-engineering/trainingportal-janitor-package:v0.0.1
     kbld.carvel.dev/origins: |
       - resolved:

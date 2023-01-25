@@ -1,0 +1,13 @@
+apiVersion: data.packaging.carvel.dev/v1alpha1
+kind: PackageMetadata
+metadata:
+  name: terraform-operator.vmware.com
+spec:
+  displayName: "terraform-operator"
+  longDescription: "Terraform Operator applies terrafrom scripts to provision infrastructure"
+  shortDescription: "Infrastructure Automation"
+  maintainers:
+  - name: "Chris DeLashmutt <cdelashmutt@vmware.com>"
+  supportDescription: "Community"
+  categories:
+  - infrastructure
