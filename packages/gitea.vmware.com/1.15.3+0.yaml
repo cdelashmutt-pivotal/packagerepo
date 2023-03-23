@@ -29,6 +29,27 @@ spec:
           examples:
           - my-tls-secret
           - default/default-cert-tls
+        extra_repository_config:
+          type: string
+          description: Any extra configuration for the Gitea INI
+          examples:
+          - |
+              DEFAULT_BRANCH = main
+              DEFAULT_PRIVATE = public
+              DEFAULT_PUSH_CREATE_PRIVATE = false
+              ENABLE_PUSH_CREATE_USER = true
+        admin_username:
+          type: string
+          description: The admin account username
+          default: gitea_admin
+          examples:
+          - my_admin
+        admin_password:
+          type: string
+          description: The admin account password
+          examples:
+          - Xy4MgZ7OD3qR7DCL
+
   template:
     spec:
       fetch:
