@@ -1,0 +1,28 @@
+---
+apiVersion: data.packaging.carvel.dev/v1alpha1
+kind: Package
+metadata:
+  name: trainingportal-janitor.vmware.com.0.0.2
+spec:
+  refName: trainingportal-janitor.vmware.com
+  version: 0.0.2
+  releaseNotes: |
+        Updated to handle Educates and Learning Center
+  licenses:
+  - "Apache 2.0"
+  releasedAt: 2024-03-16T14:45:51Z
+  template:
+    spec:
+      fetch:
+      - imgpkgBundle:
+          image: ghcr.io/tanzu-solutions-engineering/trainingportal-janitor-package:v0.0.2
+      template:
+      - ytt:
+          paths:
+          - "config/"
+      - kbld:
+          paths:
+          - "-"
+          - ".imgpkg/images.yml"
+      deploy:
+      - kapp: {}

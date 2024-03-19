@@ -64,4 +64,11 @@ images:
           tag: v0.0.1
           url: ghcr.io/tanzu-solutions-engineering/trainingportal-janitor-package:v0.0.1
   image: ghcr.io/tanzu-solutions-engineering/trainingportal-janitor-package@sha256:0cd486c7c856e030ea189b4088e6c0e2715015a95abf0fc4a2481434ee0d947c
+- annotations:
+    kbld.carvel.dev/id: ghcr.io/tanzu-solutions-engineering/trainingportal-janitor-package:v0.0.2
+    kbld.carvel.dev/origins: |
+      - resolved:
+          tag: v0.0.2
+          url: ghcr.io/tanzu-solutions-engineering/trainingportal-janitor-package:v0.0.2
+  image: ghcr.io/tanzu-solutions-engineering/trainingportal-janitor-package@sha256:649ec3f834f7b347df0f9271ec1ee558ec544c16f249659b030b2915fa6be778
 kind: ImagesLock
