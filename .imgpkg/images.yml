@@ -70,5 +70,5 @@ images:
       - resolved:
           tag: v0.0.2
           url: ghcr.io/tanzu-solutions-engineering/trainingportal-janitor-package:v0.0.2
-  image: ghcr.io/tanzu-solutions-engineering/trainingportal-janitor-package@sha256:649ec3f834f7b347df0f9271ec1ee558ec544c16f249659b030b2915fa6be778
+  image: ghcr.io/tanzu-solutions-engineering/trainingportal-janitor-package@sha256:34b6964eb6ebe5c4542e0931e3fd2b6b119df3f48e7ebb121020e6e33b046189
 kind: ImagesLock
